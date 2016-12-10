@@ -59,6 +59,7 @@
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
+    "babel-plugin-lodash": "^3.2.10",
     "eslint": "^3.11.1",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.2.0",
