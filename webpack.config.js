@@ -2,8 +2,8 @@ module.exports = {
   entry: './index.js',
   output: {
     path: './dist',
-    filename: '@shoutem-animation.js',
-    library: '@shoutem-animation',
+    filename: 'shoutem-animation.js',
+    library: '@shoutem/animation',
     libraryTarget: 'umd',
   },
   module: {
