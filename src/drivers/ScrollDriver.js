@@ -17,15 +17,15 @@ export class ScrollDriver {
     this.value = new Animated.Value(0);
     this.onScrollViewLayout = this.onScrollViewLayout.bind(this);
     this.scrollViewProps = {
-      // onScroll doesn't fire as expected, so use direct manipulation by
-      // listening to scroll directly on the DOM node.
-      ref: (scrollView) => {
-        const node = scrollView.getScrollableNode();
-
-        node.addEventListener('scroll', () => {
-          this.value.setValue(node.scrollTop)
-        });
-      },
+      onScroll: Animated.event(
+        [{
+          nativeEvent: {
+            target: {
+              scrollTop: this.value,
+            },
+          },
+        }]
+      ),
       scrollEventThrottle: 1,
       onLayout: this.onScrollViewLayout,
     };
